@@ -1,0 +1,21 @@
+package com.threads.pool;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class PoolRunner
+{
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+	ExecutorService executor = Executors.newFixedThreadPool(3);
+	executor.execute(new PrintChar('a',100));
+	executor.execute(new PrintChar('b',100));
+	executor.execute(new PrintNum(100));
+	
+	executor.shutdown();
+	}
+	
+
+}
