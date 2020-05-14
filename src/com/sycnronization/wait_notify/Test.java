@@ -2,7 +2,7 @@ package com.sycnronization.wait_notify;
 
  class Customer
 {  
-public int amount=20000;  
+public int amount=10000;  
   
 	synchronized void withdraw(int amount)
 	{  
@@ -11,7 +11,7 @@ public int amount=20000;
 		if(this.amount<amount)
 		{  
 			System.out.println("Less balance; waiting for deposit... balance ="+this.amount);  
-			try{wait();}
+			try{wait();} // wait
 			catch(Exception e){}  
         } //if
 		
@@ -24,7 +24,7 @@ public int amount=20000;
 		System.out.println("going to deposit...");  
 		this.amount+=amount;  
 		System.out.println("deposit completed... balance = "+this.amount);  
-		notify();  
+		notify();  //notify
 	}  
 } //class Customer  
   

@@ -9,10 +9,11 @@ public class PoolRunner
 	public static void main(String[] args) 
 	{
 		// TODO Auto-generated method stub
-	ExecutorService executor = Executors.newFixedThreadPool(3);
-	executor.execute(new PrintChar('a',100));
-	executor.execute(new PrintChar('b',100));
-	executor.execute(new PrintNum(100));
+	ExecutorService executor = Executors.newFixedThreadPool(4); //number of threads
+	
+	executor.execute(new PrintChar('a',10));
+	executor.execute(new PrintChar('b',5));
+	executor.execute(new PrintNum(5));
 	
 	executor.shutdown();
 	}
