@@ -12,7 +12,7 @@ public class Thread1 extends Thread
 		{  
 		    try{
 		    	Thread.sleep(500);
-		    Thread.yield();	
+		  //  Thread.yield();	
 		    }
 		    
 		    catch(InterruptedException e){System.out.println(e);}  

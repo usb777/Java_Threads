@@ -12,8 +12,10 @@ public class Thread3 extends Thread
 		for(int i=1;i<5;i++)
 		{  
 		    try{
-		    	Thread.sleep(500);}
-		    
+		    	Thread.sleep(500);
+		    	//   Thread.yield();	
+		    }
+		 
 		    catch(InterruptedException e){System.out.println(e);}  
 		    System.out.println(ch);  
 		  }  

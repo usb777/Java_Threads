@@ -2,8 +2,15 @@
 public class ThreadFromRunnable implements Runnable
 {
 	public void run()
-	{  
-		System.out.println("thread is running from runnable...");  
+	{   try {
+		for (int i=0;i<3;i++)
+		{
+			Thread.sleep(1000); // wait 1 sec
+			System.out.println("thread is running from runnable..."); 
+		}
+	} 
+	catch (InterruptedException ie) {}
+	
 	}  
 	
 

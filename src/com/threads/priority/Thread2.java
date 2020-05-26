@@ -11,7 +11,7 @@ public class Thread2 extends Thread
 		{  
 		    try{
 		    	Thread.sleep(500);
-		    	Thread.yield(); // 
+		    //	Thread.yield(); // 
 		    	
 		    }
 		    

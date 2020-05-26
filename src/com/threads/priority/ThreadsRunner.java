@@ -28,9 +28,25 @@ public class ThreadsRunner {
 		
 		
 	t1.start();
-	t2.start();
-	t3.start();
+
+	try {
+			t1.join();
+		} catch (InterruptedException ie) { System.out.println(" exception = "+ie ) ;}
 	
+	t2.start();
+	
+	
+	
+	try {
+		t2.join();
+	} catch (InterruptedException ie) { System.out.println(" exception = "+ie ) ;}
+
+	t3.start();
+	try {
+		t3.join();
+	} catch (InterruptedException ie) { System.out.println(" exception = "+ie ) ;}
+
+
 		
 
 	}
